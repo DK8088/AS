@@ -1,0 +1,32 @@
+{
+    "header": {
+        "logo": "/assets/logo.jpg",
+        "navItems": [
+            {
+                "id": "1",
+                "label": "Home",
+                "link": "/"
+            },
+            {
+                "id": "2",
+                "label": "Contact",
+                "link": "/contact-us"
+            }
+        ]
+    },
+    "footer": {
+        "logo": "/assets/logo.jpg",
+        "navItems": [
+            {
+                "id": "1",
+                "label": "Home",
+                "link": "/"
+            },
+            {
+                "id": "2",
+                "label": "Contact",
+                "link": "/contact-us"
+            }
+        ]
+    }
+}

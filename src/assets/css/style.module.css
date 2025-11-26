@@ -1,0 +1,14 @@
+:root {
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common Start */
+
+/* Common End */
