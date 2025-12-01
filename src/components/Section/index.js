@@ -1,10 +1,11 @@
 import Container from "../Container";
 import style from "./style.module.css";
 
-const Section = ({className, children }) => {
+const Section = ({className, children, container = true, padding = true, bg='whiteBg'}) => {
+	const classes = className && className.split(' ').map(c => style[c] || '').join(' ');
 	return (
-		<section className={`${style.section} ${ className && style?.[className] || ''}`}>
-			<Container>{children}</Container>
+		<section className={`${classes} ${style.section} ${bg} ${!padding && style.noSectionPad || ''} `}>
+			{container && <Container>{children}</Container> || children}
 		</section>
 	);
 }

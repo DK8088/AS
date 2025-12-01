@@ -1,6 +1,12 @@
+import Section from '../components/Section';
+
 const NotFound = () => {
     return (
-        <main>NotFound</main>
+        <main>
+            <Section>
+                <p> Notfound Content </p>
+            </Section>
+        </main>
     );
 }
 

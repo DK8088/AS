@@ -1,18 +1,28 @@
 {
     "header": {
-        "logo": "/assets/logo.jpg",
+        "logo": "/images/logo.png",
         "navItems": [
             {
                 "id": "1",
-                "label": "Home",
-                "link": "/"
+                "label": "Products",
+                "link": "/products"
             },
             {
                 "id": "2",
+                "label": "Shipping Details",
+                "link": "/shipping"
+            },
+            {
+                "id": "3",
                 "label": "Contact",
                 "link": "/contact-us"
             }
-        ]
+        ],
+        "ctaBtn": {
+            "label": "Order Now",
+            "link": "tel: +91-987654321",
+            "show": true
+        }
     },
     "footer": {
         "logo": "/assets/logo.jpg",

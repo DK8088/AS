@@ -1,0 +1,25 @@
+.DropDownWrapper {
+
+}
+
+.DropDownList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.DropDownItem {
+    color: var(--merun);
+    font-size: 18px;
+    letter-spacing: .8px;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    transition: .4s ease-in-out;
+}
+
+.DropDownItem:hover {
+    text-decoration-color: var(--merun);
+    transition: .4s ease-in-out;
+}

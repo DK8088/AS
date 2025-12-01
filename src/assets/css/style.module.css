@@ -1,6 +1,12 @@
 :root {
     --white: #fff;
     --black: #000;
+    --lightWhite : #fcedd1;
+    --merun: #781d18;
+    --brown: #482603;
+    --gray: #DCC5B2;
+    --lightGray: #575555;
+    --red: #FF0000;
 }
 
 * {
@@ -11,4 +17,54 @@
 
 /* Common Start */
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 /* Common End */
+
+/* Colors Start */
+
+:global  .lightWhite {
+    color: var(--lightWhite);
+}
+
+:global .lightWhiteBg {
+    background-color: var(--lightWhite);
+}
+
+:global  .merun {
+    color: var(--merun);
+}
+
+:global  .merunBg {
+    background-color: var(--merun);
+}
+
+:global  .brown {
+    color: var(--brown);
+}
+
+:global .brownBg {
+    border-color: var(--brown);
+}
+
+:global .gray {
+    color: var(--gray);
+}
+
+:global .grayBg {
+    color: var(--gray);
+}
+
+:global .lightGray {
+    color: var(--lightGray);
+}
+
+:global .lightGrayBg {
+    background-color: var(--lightGray);
+}
+
+/* Colors End */
+

@@ -1,0 +1,42 @@
+.logoWrapper {
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.headerLogo {
+    padding: 5px 0;
+}
+
+@media (max-width: 1400px) {
+    .logo {
+        width: 110px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 90px;
+    }
+}
+
+@media (max-width: 750px) {
+    .logo {
+        width: 85px;
+    }
+}
+
+@media (max-width: 540px) {
+    .logo {
+        width: 80px;
+    }
+}

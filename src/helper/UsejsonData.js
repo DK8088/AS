@@ -15,7 +15,6 @@ function UseJsonData(path) {
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, [path]);
-
   return { data, loading, error };
 }
 

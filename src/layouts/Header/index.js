@@ -1,15 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 
 import UseJsonData from '../../helper/UsejsonData';
 
 import style from './style.module.css';
-import Container from '../../components/Container';
+import Section from '../../components/Section';
+import Logo from '../../components/Logo';
+import Button from '../../components/Button';
+import BurgerMenu from '../../components/BurgerMenu';
+import DropDown from '../../components/DropDown';
+
 
 const Header = () => {
 
     const { data, loading, error } = UseJsonData('header');
     const [headerData, SetHeaderData] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         SetHeaderData(data);
@@ -17,20 +23,25 @@ const Header = () => {
 
     return (
         <header>
-            {
-                <Container className="headerSection">
-                    <div className="headerWrapper">
-                        <div className="headerNavList">
-                            {
-                                <Link className="headerNavItem" to='/'>Home</Link>
-                            }
-                            {
-                                <Link className="headerNavItem" to='/contact-us'>Contact Us</Link>
-                            }
-                        </div>
+            <Section className="headerSection" padding={false} bg='merunBg'>
+                <div className={`${style.headerWrapper}`}>
+                    <Logo className="headerLogo" path={headerData && headerData.logo} ></Logo>
+                    <div className={style.headerNavList}>
+                        {
+                            headerData && headerData.navItems.map((navItem) => (
+                                <Link key={navItem.id} className={style.headerNavItem} id={`headerNavItem${navItem.id}`} to={navItem.link}>{navItem.label}</Link>
+                            ))
+                        }
+                        {
+                            headerData && headerData.ctaBtn && headerData.ctaBtn.show && (
+                                <Button className="smallBtn btnLightWhite" type='btn' label={headerData.ctaBtn.label} link={headerData.ctaBtn.link}></Button>
+                            )
+                        }
                     </div>
-                </Container>
-            }
+                    <BurgerMenu onToggle={setMenuOpen}></BurgerMenu>
+                </div>
+            </Section>
+            <DropDown open={menuOpen} list={headerData && headerData.navItems || ''}></DropDown>
         </header>
     );
 }
