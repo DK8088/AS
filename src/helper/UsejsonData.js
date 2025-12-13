@@ -1,21 +1,32 @@
 import { useEffect, useState } from "react";
 
-function UseJsonData(path) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function useJsonData(path) {
+	const [data, setData] = useState({
+		data: null,
+		loading: true,
+		error: null,
+	});
 
-  useEffect(() => {
-    fetch(`http://localhost:5001/${path}/`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load JSON file");
-        return res.json();
-      })
-      .then((json) => setData(json))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, [path]);
-  return { data, loading, error };
+	useEffect(() => {
+		const loadData = async () => {
+			setData({ data: null, loading: true, error: null });
+
+			try {
+				const res = await fetch(`http://localhost:5001/${path}/`);
+				if (!res.ok) throw new Error("Failed to load JSON file");
+
+				const json = await res.json();
+
+				setData({ data: json, loading: false, error: null });
+			} catch (err) {
+				setData({ data: null, loading: false, error: err.message });
+			}
+		};
+
+		loadData();
+	}, [path]);
+
+	return data;
 }
 
-export default UseJsonData;
+export default useJsonData;

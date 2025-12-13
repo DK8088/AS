@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
 import UseJsonData from '../../helper/UsejsonData';
@@ -13,7 +13,7 @@ import DropDown from '../../components/DropDown';
 
 const Header = () => {
 
-    const { data, loading, error } = UseJsonData('header');
+    const { data, loading } = UseJsonData('header');
     const [headerData, SetHeaderData] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const Header = () => {
                     <Logo className="headerLogo" path={headerData && headerData.logo} ></Logo>
                     <div className={style.headerNavList}>
                         {
-                            headerData && headerData.navItems.map((navItem) => (
+                            headerData && !loading && headerData.navItems.map((navItem) => (
                                 <Link key={navItem.id} className={style.headerNavItem} id={`headerNavItem${navItem.id}`} to={navItem.link}>{navItem.label}</Link>
                             ))
                         }
@@ -41,7 +41,7 @@ const Header = () => {
                     <BurgerMenu onToggle={setMenuOpen}></BurgerMenu>
                 </div>
             </Section>
-            <DropDown open={menuOpen} list={headerData && headerData.navItems || ''}></DropDown>
+            <DropDown open={menuOpen} list={(headerData && headerData.navItems) || ''}></DropDown>
         </header>
     );
 }

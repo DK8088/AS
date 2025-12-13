@@ -1,0 +1,30 @@
+.gridRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+	row-gap: 26px;
+}
+
+@media (max-width: 1400px) {
+    .gridRow {
+        margin: 0 -16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gridRow {
+        margin: 0 -12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gridRow {
+        margin: 0 -8px;
+    }
+}
+
+@media (max-width: 750px) {
+    .gridRow {
+        margin: 0;
+    }
+}

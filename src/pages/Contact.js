@@ -1,12 +1,13 @@
 import Section from '../components/Section';
+import MainContent from '../components/MainContent';
 
 const Contact = () => {
     return (
-        <main>
+        <MainContent>
             <Section>
                 <p> Contact Content </p>
             </Section>
-        </main>
+        </MainContent>
     );
 }
 

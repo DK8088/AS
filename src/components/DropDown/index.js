@@ -11,7 +11,7 @@ const DropDown = ({open, list=[]}) => {
                 <div className={`${style.DropDownList}`}>
                     {
                         list && list.map((listItem) => (
-                            <Button className="DropDownItem" key={listItem.id} type="link" label={listItem.label} to={listItem.link}></Button>
+                            <Button className="DropDownItem" key={listItem.id} type="link" label={listItem.label} link={listItem.link}></Button>
                         ))
                     }
                 </div>

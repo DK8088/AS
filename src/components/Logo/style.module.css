@@ -3,40 +3,89 @@
 }
 
 .logo {
-    width: 120px;
     height: auto;
+    width: 70px;
+}
+
+.logoLink {
+    display: inline-block;
 }
 
 .headerLogo {
+    width: 120px;
     padding: 5px 0;
 }
 
+.FooterLogo {
+    width: 210px;
+}
+
 @media (max-width: 1400px) {
-    .logo {
+    .headerLogo {
         width: 110px;
+    }
+
+    .FooterLogo {
+        width: 200px;
     }
 }
 
 @media (max-width: 1200px) {
+    
     .logo {
+        width: 65px;
+    }
+
+    .headerLogo {
         width: 100px;
+    }
+
+    .FooterLogo {
+        width: 190px;
     }
 }
 
 @media (max-width: 1024px) {
+
     .logo {
+        width: 60px;
+    }
+
+    .headerLogo {
         width: 90px;
+    }
+
+    .FooterLogo {
+        width: 180px;
     }
 }
 
 @media (max-width: 750px) {
+
     .logo {
+        width: 55px;
+    }
+
+    .headerLogo {
         width: 85px;
+    }
+
+    .FooterLogo {
+        width: 170px;
     }
 }
 
 @media (max-width: 540px) {
+
     .logo {
+        width: 50px;
+    }
+
+    .headerLogo {
         width: 80px;
+    }
+
+    .FooterLogo {
+        width: 160px;
     }
 }

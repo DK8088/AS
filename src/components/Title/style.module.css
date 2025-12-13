@@ -1,0 +1,97 @@
+.title {
+    letter-spacing: 1.5px;
+}
+
+.nunito {
+    font-family: "Nunito";
+}
+
+.sansita {
+    font-family: "Sansita";
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fs35 {
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+.footerTitle {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.footerTitle::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    height: 2.5px;
+    background-color: var(--lightWhite);
+    animation: headerLine 3.5s ease-in-out infinite;
+    border-radius: 8px;
+}
+
+@media (max-width: 1400px) {
+    .fs35 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fs35 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .fs35 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .fs35 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 540px) {
+    .fs35 {
+        font-size: 26px;
+    }
+}
+
+
+@keyframes headerLine {
+    0% {
+        width: 5%;
+        transform: translateX(0%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 90%;
+    }
+
+    100% {
+        width: 100%;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

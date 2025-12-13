@@ -1,9 +1,16 @@
 .section {
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .section.noSectionPad {
     padding: 0;
+}
+
+.headerSection {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Header Drop Down Start */
@@ -12,18 +19,19 @@
     position: fixed;
     width: 100%;
     top: -100%;
-    transition: top 0.4s ease-in-out;
-}
-
-.DropDownSection.mobileMenuOpen {
-    top: auto;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s ease-in-out;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Header Drop Down Start */
 
 @media (max-width: 1400px) {
     .section {
-        padding: 50px 0;
+        padding: 45px 0;
     }
 }
 
@@ -43,6 +51,14 @@
     .section {
         padding: 30px 0;
     }
+
+    .DropDownSection.mobileMenuOpen {
+        top: 75px;
+        opacity: 1;
+        visibility: visible;
+        transition: all .8s ease-in-out;
+    }
+
 }
 
 @media (max-width: 540px) {

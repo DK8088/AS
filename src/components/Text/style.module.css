@@ -1,0 +1,69 @@
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.nunito {
+    font-family: "Nunito";
+}
+
+.sansita {
+    font-family: "Sansita";
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+@media (max-width: 1400px) {
+    .fs20 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fs20 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 750px) {
+    .footerAddress {
+        text-align: center;
+    }
+}
+
+@media (max-width: 540px) {}

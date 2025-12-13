@@ -1,12 +1,13 @@
 import Section from '../components/Section';
+import MainContent from '../components/MainContent';
 
 const Products = () => {
     return (
-        <main>
+        <MainContent>
             <Section>
-                <p> Masala Content </p>
+                <p> Products Content </p>
             </Section>
-        </main>
+        </MainContent>
     );
 }
 

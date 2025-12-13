@@ -1,12 +1,21 @@
-import Section from '../components/Section';
+import MainContent from '../components/MainContent';
+import HeroBanner from '../widgets/HeroBanner';
+import UseJsonData from '../helper/UsejsonData.js';
+import { useState,useEffect } from 'react';
 
 const Home = () => {
+
+    const [homePageData, setHomePageData] = useState(null);
+    const { data, loading } = UseJsonData('homePage');
+
+    useEffect(() => {
+        setHomePageData(data);
+    },[data,loading]);
+
     return (
-        <main>
-            <Section>
-                <p> Homepage Content </p>
-            </Section>
-        </main>
+        <MainContent>
+            <HeroBanner slides={homePageData && homePageData.banner.imageSlides}></HeroBanner>
+        </MainContent>
     );
 }
 

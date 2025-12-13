@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Products from './pages/Products.js';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import './assets/css/fontawesome.css';
+import './assets/css/font.css';
 import './assets/css/style.module.css';
 
 function App() {

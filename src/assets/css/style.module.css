@@ -15,6 +15,18 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Nunito";
+    font-size: 16px;
+    background-color: var(--lightWhite);
+    color: var(--merun);
+}
+
+body::selection {
+    background-color: var(--lightGray);
+    color: var(--lightWhite);
+}
+
 /* Common Start */
 
 img {
