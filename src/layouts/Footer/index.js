@@ -29,7 +29,7 @@ const Footer = () => {
                     <GridRow>
                         {
                             footerData && !loading && footerData.linkColumns.map((data) => (
-                                <GridColumn key={data.id} columnType="footerColumn">
+                                <GridColumn key={data.id} wrapperClass="footerColumn">
                                     {
                                         data && data.title && (<Title className="footerTitle" color="lightWhite" value={data.title}></Title>)
                                     }
@@ -41,7 +41,7 @@ const Footer = () => {
                                 </GridColumn>
                             ))
                         }
-                        <GridColumn columnType="footerColumn">
+                        <GridColumn wrapperClass="footerColumn">
                             {
                                 data && data.address.title && (<Title className="footerTitle" color="lightWhite" value={data.address.title} btmLine={true}></Title>)
                             }
@@ -49,7 +49,7 @@ const Footer = () => {
                                 data && data.address.content && (<Text className="footerAddress" color="lightWhite" value={data.address.content}></Text>)
                             }
                         </GridColumn>
-                        <GridColumn columnType="footerColumn">
+                        <GridColumn wrapperClass="footerColumn">
                             {
                                 footerData && footerData.socialLinks.title && (<Title className="footerTitle" color="lightWhite" value={footerData.socialLinks.title}></Title>)
                             }

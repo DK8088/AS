@@ -35,6 +35,15 @@
 	content: unset;
 }
 
+.iconColumn {
+	border: 1px solid var(--lightWhite);
+	border-radius: 8px;
+	height: 100%;
+	padding: 20px;
+	background-color: var(--merun);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 @media (max-width: 1400px) {
 	.gridColumnWrapper {
 		padding: 0 16px;

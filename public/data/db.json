@@ -127,6 +127,38 @@
                     "alt": "Banner Image"
                 }
             ]
+        },
+        "iconColumn": {
+            "cards": [
+                {
+                    "id": "1",
+                    "title": "Secure Payment",
+                    "desc": "Choose your way to pay secure online payment or convenient cash on delivery at your doorstep.",
+                    "src": "/images/card.svg",
+                    "alt": "icon"
+                },
+                {
+                    "id": "2",
+                    "title": "Free Shipping",
+                    "desc": "Shop for ₹999 or more and enjoy Free Shipping. Applicable for specific locations.",
+                    "src": "/images/truck.svg",
+                    "alt": "icon"
+                },
+                {
+                    "id": "3",
+                    "title": "Delivered with Care",
+                    "desc": "From packaging to delivery, we handle every product with love and care.",
+                    "src": "/images/box.svg",
+                    "alt": "icon"
+                },
+                {
+                    "id": "4",
+                    "title": "Excellent Service",
+                    "desc": "Your satisfaction is our top priority. Count on us for excellent service from order to delivery.",
+                    "src": "/images/heart.svg",
+                    "alt": "icon"
+                }
+            ]
         }
     }
 }

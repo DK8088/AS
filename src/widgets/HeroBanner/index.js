@@ -6,15 +6,13 @@ import Image from '../../components/Image';
 
 const HeroBanner = ({ slides }) => {
 	return (
-		<Section>
-			<div className={style.banner}>
-				<Slider slides={slides}>
-					{
-						(slides) => (<Image className='bannerSlideImage' src={ slides.src} alt={slides.alt}/>)
-					}
-				</Slider>
-			</div>
-		</Section>
+		<div className={style.banner}>
+			<Slider slides={slides}>
+				{
+					(slides) => (<Image className='bannerSlideImage' src={slides.src} alt={slides.alt} />)
+				}
+			</Slider>
+		</div>
 	);
 }
 

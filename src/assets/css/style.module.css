@@ -38,6 +38,14 @@ img {
 
 /* Colors Start */
 
+:global  .white {
+    color: var(--white);
+}
+
+:global .whiteBg {
+    background-color: var(--white);
+}
+
 :global  .lightWhite {
     color: var(--lightWhite);
 }
@@ -59,7 +67,7 @@ img {
 }
 
 :global .brownBg {
-    border-color: var(--brown);
+    background-color: var(--brown);
 }
 
 :global .gray {
@@ -67,7 +75,7 @@ img {
 }
 
 :global .grayBg {
-    color: var(--gray);
+    background-color: var(--gray);
 }
 
 :global .lightGray {

@@ -1,10 +1,10 @@
-import React from 'react';
 import style from './style.module.css';
 
-const GridColumn = ({ columnType, children, columnCount = 3 }) => {
+const GridColumn = ({ wrapperClass = '', className = '', animateClass = '', gridRef = {}, children, columnCount = 4 }) => {
+
     return (
-        <div className={`${style.gridColumnWrapper} ${style.columnCount}${columnCount} ${style?.[columnType] || ''}`}>
-            <div className={`${style.gridColumn}`}>
+        <div className={`${animateClass} ${style.gridColumnWrapper} ${style.columnCount}${columnCount} ${style?.[wrapperClass] || ''}`}>
+            <div className={`${style.gridColumn} ${style[className] || ''}`}>
                 {children}
             </div>
         </div>
