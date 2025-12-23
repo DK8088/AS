@@ -159,6 +159,19 @@
                     "alt": "icon"
                 }
             ]
+        },
+        "parallaxBanner": {
+            "src" : "/images/parallax2.jpg",
+            "alt" : "page Banner Image",
+            "title" : ["Offer","Get upto 20% off"],
+            "desc" : "For All The Spicy Masala's"
+        },
+        "textAndImage1" : {
+            "imageDirection" : "leftToRight",
+            "src" : "/images/sambar_masala05.png",
+            "alt" : "Masala",
+            "title" : "Product Title",
+            "desc" : "Lorem ipsum dolor simet Lorem ipsum dolor simet Lorem ipsum dolor simet Lorem ipsum dolor simet Lorem ipsum dolor simet Lorem ipsum dolor simet"
         }
     }
 }

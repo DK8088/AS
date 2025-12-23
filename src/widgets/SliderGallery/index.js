@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './style.module.css';
-import Slider from '../../components/Slider';
 import Section from '../../components/Section';
+import Slider from '../../components/Slider';
 import Image from '../../components/Image';
 
-const HeroBanner = ({ slides }) => {
+const SliderGallery = ({ slides }) => {
 	return (
 		<Section>
-			<div className={style.banner}>
+			<div className='sliderGalleryWrapper'>
 				<Slider slides={slides}>
 					{
 						(slides) => (<Image className='bannerSlideImage' src={slides.src} alt={slides.alt} />)
@@ -15,7 +15,7 @@ const HeroBanner = ({ slides }) => {
 				</Slider>
 			</div>
 		</Section>
-	);
+	)
 }
 
-export default HeroBanner;
+export default SliderGallery;

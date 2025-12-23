@@ -1,5 +1,6 @@
 .section {
     padding: 50px 0;
+    position: relative;
 }
 
 .section.noSectionPad {
@@ -28,6 +29,21 @@
 }
 
 /* Header Drop Down Start */
+
+.parallaxBanner {
+    position: relative;
+}
+
+.parallaxBanner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
 
 @media (max-width: 1400px) {
     .section {

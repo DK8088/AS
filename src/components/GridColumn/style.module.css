@@ -44,6 +44,10 @@
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.gridColumnWrapper.col50 {
+	width: 50%;
+}
+
 @media (max-width: 1400px) {
 	.gridColumnWrapper {
 		padding: 0 16px;
@@ -116,6 +120,10 @@
 
 	.footerColumn:nth-child(2):after {
 		content: '';
+	}
+
+	.gridColumnWrapper.col50 {
+		width: 100%;
 	}
 
 }

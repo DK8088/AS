@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import UseJsonData from '../helper/UsejsonData.js';
-import MainContent from '../components/MainContent';
-import Section from '../components/Section';
 import HeroBanner from '../widgets/HeroBanner';
 import IconColumn from '../widgets/IconColumn';
 import ParallaxBanner from '../widgets/ParallaxBanner';
+import TextAndImage from '../widgets/TextAndImage';
+import SliderGallery from '../widgets/SliderGallery';
 
 const Home = () => {
 
@@ -16,13 +16,13 @@ const Home = () => {
     }, [data, loading]);
 
     return (
-        <MainContent>
-            <Section>
-                <HeroBanner slides={(homePageData && homePageData.banner.imageSlides) || []}></HeroBanner>
-            </Section>
-            <IconColumn cards={(homePageData && homePageData.iconColumn.cards) || []} ></IconColumn>
-            <ParallaxBanner></ParallaxBanner>
-        </MainContent>
+        <>
+            <HeroBanner slides={(homePageData && homePageData.banner.imageSlides) || []}/>
+            <IconColumn cards={(homePageData && homePageData.iconColumn.cards) || []}/>
+            <ParallaxBanner data={(homePageData && homePageData.parallaxBanner) || []}/>
+            <TextAndImage data={(homePageData && homePageData.textAndImage1) || []}/>
+            <SliderGallery slides={(homePageData && homePageData.banner.imageSlides) || []}/>
+        </>
     );
 }
 

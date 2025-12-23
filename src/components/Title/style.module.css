@@ -38,6 +38,16 @@
     line-height: 1.2;
 }
 
+.fs42 {
+    font-size: 42px;
+    line-height: 1.4;
+}
+
+.fs50 {
+    font-size: 50px;
+    line-height: 1.4;
+}
+
 .footerTitle {
     display: inline-block;
     width: fit-content;
@@ -59,30 +69,50 @@
 }
 
 @media (max-width: 1400px) {
+    .fs50 {
+        font-size: 44px;
+    }
+
     .fs35 {
         font-size: 34px;
     }
 }
 
 @media (max-width: 1200px) {
+    .fs50 {
+        font-size: 40px;
+    }
+
     .fs35 {
         font-size: 32px;
     }
 }
 
 @media (max-width: 1024px) {
+    .fs50 {
+        font-size: 38px;
+    }
+
     .fs35 {
         font-size: 30px;
     }
 }
 
 @media (max-width: 750px) {
+    .fs50 {
+        font-size: 36px;
+    }
+
     .fs35 {
         font-size: 28px;
     }
 }
 
 @media (max-width: 540px) {
+    .fs50 {
+        font-size: 34px;
+    }
+
     .fs35 {
         font-size: 26px;
     }

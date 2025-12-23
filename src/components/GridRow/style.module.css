@@ -2,7 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
-	row-gap: 26px;
+    row-gap: 26px;
+}
+
+.directionColumn {
+    flex-direction: column;
+}
+
+.directionRightToLeft {
+    flex-direction: row-reverse;
 }
 
 @media (max-width: 1400px) {
@@ -26,5 +34,9 @@
 @media (max-width: 750px) {
     .gridRow {
         margin: 0;
+    }
+
+    .directionRightToLeft {
+        flex-direction: column;
     }
 }

@@ -6,14 +6,22 @@ import Title from '../../components/Title';
 import Text from '../../components/Text';
 import Spacer from '../../components/Spacer';
 
-function ParallaxBanner() {
-  return (
-    <Section className='parallaxBanner'>
-        <Image className='parallaxImage' src='' alt=''/>
-        <Title value='Banner Title'></Title>
-        <Text value='Lorem'></Text>
-    </Section>
-  )
+const ParallaxBanner = ({ data = [] }) => {
+
+	return (
+		<Section className='parallaxBanner' bg='none'>
+			<div className={style.parallaxBannerWrapper}>
+				<Image className='parallaxImage' src={data.src && data.src} alt={(data.alt && data.alt) || 'parallax Banner'} />
+				{
+					data.title && data.title.map((item, index) => (
+						<Title key={index + 1} value={item} color='lightWhite' size='fs50' ></Title>
+					))
+				}
+				<Spacer space='30' />
+				<Text value={data.desc && data.desc} color='lightWhite'></Text>
+			</div>
+		</Section>
+	)
 }
 
 export default ParallaxBanner;

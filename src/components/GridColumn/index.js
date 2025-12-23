@@ -1,9 +1,9 @@
 import style from './style.module.css';
 
-const GridColumn = ({ wrapperClass = '', className = '', animateClass = '', gridRef = {}, children, columnCount = 4 }) => {
+const GridColumn = ({ wrapperClass = '', className = '', animateClass = '', children, col = '' }) => {
 
     return (
-        <div className={`${animateClass} ${style.gridColumnWrapper} ${style.columnCount}${columnCount} ${style?.[wrapperClass] || ''}`}>
+        <div className={`${animateClass} ${style.gridColumnWrapper} ${style?.[col] || ''}  ${style?.[wrapperClass] || ''}`}>
             <div className={`${style.gridColumn} ${style[className] || ''}`}>
                 {children}
             </div>

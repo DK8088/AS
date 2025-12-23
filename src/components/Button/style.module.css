@@ -1,7 +1,7 @@
 .btn {
     display: inline-block;
     min-width: 140px;
-    padding: 16px;
+    padding: 10px 12px;
     border: 1.8px solid var(--merun);
     background-color: var(--merun);
     color: var(--lightWhite);
