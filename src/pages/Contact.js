@@ -6,7 +6,7 @@ import ContactBanner from '../widgets/ContactBanner';
 const Contact = () => {
 
     const [contactPageData, setContactPageData] = useState(null);
-    const { data, loading } = UseJsonData('contactPage');
+    const { data, loading } = UseJsonData('contact');
 
     useEffect(() => {
         setContactPageData(data);

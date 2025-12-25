@@ -19,57 +19,59 @@ const Footer = () => {
         setFooterData(data);
     }, [data]);
 
-    return (
-        <footer>
-            <Section bg="merunBg">
-                <div className={style.footerWrapper}>
-                    <div className={style.footerTopSection}>
-                        <Logo className="FooterLogo" path={footerData && footerData.logo} ></Logo>
-                    </div>
-                    <GridRow>
-                        {
-                            footerData && !loading && footerData.linkColumns.map((data) => (
-                                <GridColumn key={data.id} wrapperClass="footerColumn">
+    if (footerData) {
+        return (
+            <footer>
+                <Section bg="merunBg">
+                    <div className={style.footerWrapper}>
+                        <div className={style.footerTopSection}>
+                            <Logo className="FooterLogo" path={footerData.logo} ></Logo>
+                        </div>
+                        <GridRow>
+                            {
+                                !loading && footerData.linkColumns.map((data) => (
+                                    <GridColumn key={data.id} wrapperClass="footerColumn">
+                                        {
+                                            data && data.title && (<Title className="animateTitle" color="lightWhite" value={data.title}></Title>)
+                                        }
+                                        {
+                                            data && data.items.map((link, index) => (
+                                                <Button key={index + 1} className="footerLink" label={link.label} link={link.url} type="link" color="lightWhite"></Button>
+                                            ))
+                                        }
+                                    </GridColumn>
+                                ))
+                            }
+                            <GridColumn wrapperClass="footerColumn">
+                                {
+                                    data && data.address.title && (<Title className="animateTitle" color="lightWhite" value={data.address.title} btmLine={true}></Title>)
+                                }
+                                {
+                                    data && data.address.content && (<Text className="footerAddress" color="lightWhite" value={data.address.content}></Text>)
+                                }
+                            </GridColumn>
+                            <GridColumn wrapperClass="footerColumn">
+                                {
+                                    footerData.socialLinks.title && (<Title className="animateTitle" color="lightWhite" value={footerData.socialLinks.title}></Title>)
+                                }
+                                <div className={style.socialRow}>
                                     {
-                                        data && data.title && (<Title className="animateTitle" color="lightWhite" value={data.title}></Title>)
-                                    }
-                                    {
-                                        data && data.items.map((link,index) => (
-                                            <Button key={index+1} className="footerLink" label={link.label} link={link.url} type="link" color="lightWhite"></Button>
+                                        footerData.socialLinks.items.map((data) => (
+                                            <Link key={data.id} to={data.link} className={style.socialIcon}><i className={`fa-brands fa-${data.platform}`}></i></Link>
                                         ))
                                     }
-                                </GridColumn>
-                            ))
-                        }
-                        <GridColumn wrapperClass="footerColumn">
-                            {
-                                data && data.address.title && (<Title className="animateTitle" color="lightWhite" value={data.address.title} btmLine={true}></Title>)
-                            }
-                            {
-                                data && data.address.content && (<Text className="footerAddress" color="lightWhite" value={data.address.content}></Text>)
-                            }
-                        </GridColumn>
-                        <GridColumn wrapperClass="footerColumn">
-                            {
-                                footerData && footerData.socialLinks.title && (<Title className="animateTitle" color="lightWhite" value={footerData.socialLinks.title}></Title>)
-                            }
-                            <div className={style.socialRow}>
-                                {
-                                    footerData && footerData.socialLinks.items.map((data) => (
-                                        <Link key={data.id} to={data.link} className={style.socialIcon}><i className={`fa-brands fa-${data.platform}`}></i></Link>
-                                    ))
-                                }
-                            </div>
-                        </GridColumn>
-                    </GridRow>
-                    <div className={style.footerBottomSection}>
-                        <Text size="fs14" value={footerData && footerData.copyRight} color="lightWhite"></Text>
-                        <Logo path={footerData && footerData.fssaiLogo} ></Logo>
+                                </div>
+                            </GridColumn>
+                        </GridRow>
+                        <div className={style.footerBottomSection}>
+                            <Text size="fs14" value={footerData.copyRight} color="lightWhite"></Text>
+                            <Logo path={footerData.fssaiLogo} ></Logo>
+                        </div>
                     </div>
-                </div>
-            </Section>
-        </footer>
-    )
+                </Section>
+            </footer>
+        )
+    }
 }
 
 export default Footer;

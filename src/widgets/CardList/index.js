@@ -17,7 +17,7 @@ const CardList = ({ products = [], data = [] }) => {
                         <GridColumn col='col75' key={item.id} className='productCard'>
                             <GridRow >
                                 <GridColumn col='col100' className='productCardImageCol'>
-                                    <Image className='productCardImage' src={item.src} alt={item.alt} />
+                                    <Image link={item.url} className='productCardImage' src={item.src} alt={item.alt} />
                                 </GridColumn>
                                 <GridColumn col='col100' className='productCardTextCol'>
                                     <Title value={item.title} size='fs28' />

@@ -9,21 +9,23 @@ import SliderGallery from '../widgets/SliderGallery';
 const Home = () => {
 
     const [homePageData, setHomePageData] = useState(null);
-    const { data, loading } = UseJsonData('homePage');
+    const { data, loading } = UseJsonData('home');
 
     useEffect(() => {
         setHomePageData(data);
     }, [data, loading]);
 
-    return (
-        <>
-            <HeroBanner slides={(homePageData && homePageData.banner.imageSlides) || []}/>
-            <IconColumn cards={(homePageData && homePageData.iconColumn.cards) || []}/>
-            <ParallaxBanner data={(homePageData && homePageData.parallaxBanner) || []}/>
-            <TextAndImage data={(homePageData && homePageData.textAndImage1) || []}/>
-            <SliderGallery slides={(homePageData && homePageData.sliderGallery.slides) || []}/>
-        </>
-    );
+    if (homePageData) {
+        return (
+            <>
+                <HeroBanner slides={homePageData.banner.imageSlides || []}/>
+                <IconColumn cards={homePageData.iconColumn.cards || []}/>
+                <ParallaxBanner data={homePageData.parallaxBanner || []}/>
+                <TextAndImage data={homePageData.textAndImage1 || []}/>
+                <SliderGallery slides={homePageData.sliderGallery.slides || []}/>
+            </>
+        );
+    }
 }
 
 export default Home;

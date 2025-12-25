@@ -21,29 +21,31 @@ const Header = () => {
         SetHeaderData(data);
     }, [data]);
 
-    return (
-        <header>
-            <Section className="headerSection" padding={false} bg='merunBg'>
-                <div className={`${style.headerWrapper}`}>
-                    <Logo className="headerLogo" path={headerData && headerData.logo} ></Logo>
-                    <div className={style.headerNavList}>
-                        {
-                            headerData && !loading && headerData.navItems.map((navItem) => (
-                                <Link key={navItem.id} className={style.headerNavItem} id={`headerNavItem${navItem.id}`} to={navItem.link}>{navItem.label}</Link>
-                            ))
-                        }
-                        {
-                            headerData && headerData.ctaBtn && headerData.ctaBtn.show && (
-                                <Button className="smallBtn btnLightWhite" type='btn' label={headerData.ctaBtn.label} link={headerData.ctaBtn.link}></Button>
-                            )
-                        }
+    if (headerData) {
+        return (
+            <header>
+                <Section className="headerSection" padding={false} bg='merunBg'>
+                    <div className={`${style.headerWrapper}`}>
+                        <Logo className="headerLogo" path={headerData.logo} ></Logo>
+                        <div className={style.headerNavList}>
+                            {
+                                !loading && headerData.navItems.map((navItem) => (
+                                    <Link key={navItem.id} className={style.headerNavItem} id={`headerNavItem${navItem.id}`} to={navItem.link}>{navItem.label}</Link>
+                                ))
+                            }
+                            {
+                                headerData.ctaBtn && headerData.ctaBtn.show && (
+                                    <Button className="smallBtn btnLightWhite" type='btn' label={headerData.ctaBtn.label} link={headerData.ctaBtn.link}></Button>
+                                )
+                            }
+                        </div>
+                        <BurgerMenu onToggle={setMenuOpen} open={menuOpen}></BurgerMenu>
                     </div>
-                    <BurgerMenu onToggle={setMenuOpen} open={menuOpen}></BurgerMenu>
-                </div>
-            </Section>
-            <DropDown onToggle={setMenuOpen} open={menuOpen} list={(headerData && headerData.navItems) || ''}></DropDown>
-        </header>
-    );
+                </Section>
+                <DropDown onToggle={setMenuOpen} open={menuOpen} list={(headerData.navItems) || ''}></DropDown>
+            </header>
+        );
+    }
 }
 
 export default Header;

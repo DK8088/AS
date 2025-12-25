@@ -8,7 +8,7 @@ import DetailView from '../widgets/DetailView';
 
 const Products = () => {
     const [productsPageData, setProductsPageData] = useState(null);
-    const { data } = UseJsonData('productsPage');
+    const { data } = UseJsonData('products');
     const { id } = useParams();
 
     useEffect(() => {
