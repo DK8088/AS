@@ -38,10 +38,10 @@ const Header = () => {
                             )
                         }
                     </div>
-                    <BurgerMenu onToggle={setMenuOpen}></BurgerMenu>
+                    <BurgerMenu onToggle={setMenuOpen} open={menuOpen}></BurgerMenu>
                 </div>
             </Section>
-            <DropDown open={menuOpen} list={(headerData && headerData.navItems) || ''}></DropDown>
+            <DropDown onToggle={setMenuOpen} open={menuOpen} list={(headerData && headerData.navItems) || ''}></DropDown>
         </header>
     );
 }

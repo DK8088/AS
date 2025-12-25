@@ -10,6 +10,10 @@
     padding-top: 30px;
 }
 
+.space50 {
+    padding-top: 30px;
+}
+
 
 @media (max-width: 1400px) {
     .space10 {

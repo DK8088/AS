@@ -48,15 +48,15 @@
     line-height: 1.4;
 }
 
-.footerTitle {
+.animateTitle {
     display: inline-block;
     width: fit-content;
     position: relative;
     overflow: hidden;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-.footerTitle::after {
+.animateTitle::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -68,9 +68,17 @@
     border-radius: 8px;
 }
 
+.animateTitle.merun::after {
+    background-color: var(--merun);
+}
+
 @media (max-width: 1400px) {
     .fs50 {
         font-size: 44px;
+    }
+
+    .fs42 {
+        font-size: 38px;
     }
 
     .fs35 {
@@ -83,6 +91,10 @@
         font-size: 40px;
     }
 
+    .fs42 {
+        font-size: 34px;
+    }
+
     .fs35 {
         font-size: 32px;
     }
@@ -91,6 +103,10 @@
 @media (max-width: 1024px) {
     .fs50 {
         font-size: 38px;
+    }
+
+    .fs42 {
+        font-size: 32px;
     }
 
     .fs35 {
@@ -103,6 +119,10 @@
         font-size: 36px;
     }
 
+    .fs42 {
+        font-size: 30px;
+    }
+
     .fs35 {
         font-size: 28px;
     }
@@ -111,6 +131,10 @@
 @media (max-width: 540px) {
     .fs50 {
         font-size: 34px;
+    }
+
+    .fs42 {
+        font-size: 28px;
     }
 
     .fs35 {
@@ -123,7 +147,7 @@
     0% {
         width: 5%;
         transform: translateX(0%);
-        opacity: 0;
+        opacity: 50%;
     }
 
     50% {
@@ -133,6 +157,6 @@
     100% {
         width: 100%;
         transform: translateX(100%);
-        opacity: 0;
+        opacity: 50%;
     }
 }

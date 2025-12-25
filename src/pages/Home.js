@@ -21,7 +21,7 @@ const Home = () => {
             <IconColumn cards={(homePageData && homePageData.iconColumn.cards) || []}/>
             <ParallaxBanner data={(homePageData && homePageData.parallaxBanner) || []}/>
             <TextAndImage data={(homePageData && homePageData.textAndImage1) || []}/>
-            <SliderGallery slides={(homePageData && homePageData.banner.imageSlides) || []}/>
+            <SliderGallery slides={(homePageData && homePageData.sliderGallery.slides) || []}/>
         </>
     );
 }

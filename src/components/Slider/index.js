@@ -1,22 +1,24 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-
+import { Autoplay, EffectCoverflow, EffectCards, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "swiper/css";
+import 'swiper/css/effect-cards';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
-import style from "./style.module.css";
-
-const Slider = ({ className = "", slides = [], children }) => {
+const Slider = ({className='', slides = [], children, swiperProps = {}}) => {
 	return (
-		<Swiper className={`${style.slider} ${className}`}
-			modules={[Autoplay]}
-
+		<Swiper
+			className = {className}
+			modules={[Autoplay, EffectCoverflow, EffectCards, FreeMode, Navigation, Thumbs]}
 			autoplay={{
-				delay: 2500,
+				delay: 3000,
 				disableOnInteraction: false,
 			}}
+			{...swiperProps}
 		>
-			{slides && slides.map((slide, index) => (
+			{slides.map((slide) => (
 				<SwiperSlide key={slide.id}>
 					{typeof children === "function" ? children(slide) : children}
 				</SwiperSlide>
@@ -26,4 +28,3 @@ const Slider = ({ className = "", slides = [], children }) => {
 };
 
 export default Slider;
-

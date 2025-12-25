@@ -1,14 +1,23 @@
-import Section from '../components/Section';
-import MainContent from '../components/MainContent';
+import { useState, useEffect } from 'react';
+import UseJsonData from '../helper/UsejsonData.js';
+import ParallaxBanner from '../widgets/ParallaxBanner';
+import ContactBanner from '../widgets/ContactBanner';
 
 const Contact = () => {
+
+    const [contactPageData, setContactPageData] = useState(null);
+    const { data, loading } = UseJsonData('contactPage');
+
+    useEffect(() => {
+        setContactPageData(data);
+    }, [data, loading]);
+
     return (
-        <MainContent>
-            <Section>
-                <p> Contact Content </p>
-            </Section>
-        </MainContent>
-    );
+        <>
+            <ParallaxBanner data={(contactPageData && contactPageData.parallaxBanner) || []} />
+            <ContactBanner/>
+        </>
+    )
 }
 
 export default Contact;

@@ -1,12 +1,17 @@
+.gridRowWrapper {
+    height: 100%;
+}
+
 .gridRow {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
-    row-gap: 26px;
+    row-gap: 32px;
 }
 
 .directionColumn {
     flex-direction: column;
+    height: 100%;
 }
 
 .directionRightToLeft {

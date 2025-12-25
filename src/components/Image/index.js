@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Image = ({ className = '', src = null, alt = null, link = ''}) => {
 	return (
-		<div className={`${(className && style[className]) || ''} ${style.imageWrapper}`}>
+		<div className={`imgWrapper ${(className && style[className]) || ''} ${style.imageWrapper}`}>
 			{
 				(link && (
-					<Link>
+					<Link to={link}>
 						<img src={src} alt={alt} loading='lazy' />
 					</Link>
 				)) || <img src={src} alt={alt} loading='lazy' />

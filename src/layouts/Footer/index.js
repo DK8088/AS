@@ -31,7 +31,7 @@ const Footer = () => {
                             footerData && !loading && footerData.linkColumns.map((data) => (
                                 <GridColumn key={data.id} wrapperClass="footerColumn">
                                     {
-                                        data && data.title && (<Title className="footerTitle" color="lightWhite" value={data.title}></Title>)
+                                        data && data.title && (<Title className="animateTitle" color="lightWhite" value={data.title}></Title>)
                                     }
                                     {
                                         data && data.items.map((link,index) => (
@@ -43,7 +43,7 @@ const Footer = () => {
                         }
                         <GridColumn wrapperClass="footerColumn">
                             {
-                                data && data.address.title && (<Title className="footerTitle" color="lightWhite" value={data.address.title} btmLine={true}></Title>)
+                                data && data.address.title && (<Title className="animateTitle" color="lightWhite" value={data.address.title} btmLine={true}></Title>)
                             }
                             {
                                 data && data.address.content && (<Text className="footerAddress" color="lightWhite" value={data.address.content}></Text>)
@@ -51,7 +51,7 @@ const Footer = () => {
                         </GridColumn>
                         <GridColumn wrapperClass="footerColumn">
                             {
-                                footerData && footerData.socialLinks.title && (<Title className="footerTitle" color="lightWhite" value={footerData.socialLinks.title}></Title>)
+                                footerData && footerData.socialLinks.title && (<Title className="animateTitle" color="lightWhite" value={footerData.socialLinks.title}></Title>)
                             }
                             <div className={style.socialRow}>
                                 {

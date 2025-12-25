@@ -1,11 +1,10 @@
 import React from 'react';
 import style from './style.module.css';
 
-const GridRow = ({children, col}) => {
-
+const GridRow = ({className='', children, direction='' ,col}) => {
   return (
-    <div className={`gridWrapper ${style.gridRowWrapper || ''} ${style.direction || ''}`}>
-        <div className={style.gridRow}>
+    <div className={`gridWrapper ${direction} ${style.gridRowWrapper || ''}`}>
+        <div className={`${style.gridRow} ${style[direction] || ''}`}>
             {children}
         </div>
     </div>
