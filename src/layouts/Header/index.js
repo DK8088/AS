@@ -9,7 +9,7 @@ import Logo from '../../components/Logo';
 import Button from '../../components/Button';
 import BurgerMenu from '../../components/BurgerMenu';
 import DropDown from '../../components/DropDown';
-
+import Ticker from '../Ticker';
 
 const Header = () => {
 
@@ -24,6 +24,7 @@ const Header = () => {
     if (headerData) {
         return (
             <header>
+                <Ticker text={headerData.marqueeText}></Ticker>
                 <Section className="headerSection" padding={false} bg='merunBg'>
                     <div className={`${style.headerWrapper}`}>
                         <Logo className="headerLogo" path={headerData.logo} ></Logo>

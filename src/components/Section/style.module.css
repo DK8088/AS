@@ -7,13 +7,6 @@
     padding: 0;
 }
 
-.headerSection {
-    position: fixed;
-    width: 100%;
-    z-index: 99999;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 /* Header Drop Down Start */
 
 .DropDownSection {
@@ -70,7 +63,7 @@
     }
 
     .DropDownSection.mobileMenuOpen {
-        transform: translateY(75px);
+        transform: translateY(125px);
         opacity: 1;
         visibility: visible;
         transition: transform .8s ease-in-out;

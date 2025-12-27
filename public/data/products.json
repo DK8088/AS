@@ -13,6 +13,7 @@
             "title": "Sambar Masala Powder \n ( சாம்பார் பொடி )",
             "src": "/images/sambar_masala05.png",
             "url": "sambar",
+            "soldInfo": "15 sold in last 24 hours 💥",
             "slides": [
                 "/images/sambar_masala01.png",
                 "/images/sambar_masala02.png",
@@ -62,6 +63,7 @@
             "title": "Chicken 65 Masala \n (சிக்கன் 65 மசாலா)",
             "src": "images/chicken_masala05.png",
             "url": "chicken-65",
+            "soldInfo": "15 sold in last 24 hours💥",
             "slides": [
                 "/images/chicken_masala01.png",
                 "/images/chicken_masala02.png",
@@ -111,6 +113,7 @@
             "title": "Rasam Powder \n ( ரசம் பொடி )",
             "url": "rasam",
             "src": "images/rasam_masala05.png",
+            "soldInfo": "15 sold in last 24 hours 💥",
             "slides": [
                 "/images/rasam_masala01.png",
                 "/images/rasam_masala02.png",
@@ -145,7 +148,7 @@
                 }
             ],
             "desc": "Authentic spices from Tamil Nadu, India",
-            "paragraphDesc": "<b>Authentic South Indian Flavors:</b>\n\nExperience the true taste of traditional South Indian rasam with our specially crafted Rasam Masala Powder. Made with freshly ground spices, it helps you create that spicy, tangy, and aromatic rasam loved in every South Indian home.\n\n<b>Preservative-Free Goodness:</b>\n\nOur rasam masala contains no artificial preservatives, colors, or fillers. Each spoonful is made only from pure, natural spices, ensuring a clean, fresh, and wholesome flavor in every sip.\n\n<b>Homemade Taste You Can Trust:</b>\n\nCarefully blended to resemble classic homemade rasam mixes, our Rasam Masala Powder brings out the warm, bold, and authentic taste of traditional South Indian cooking. It delivers the perfect balance of heat, tanginess, and aroma—just like rasam prepared in home kitchens.\n\n<b>Perfect for Everyday Meals:</b>\n\nWhether you want a simple, comforting bowl of rasam or a flavorful addition to your lunch, our rasam masala helps you make delicious, aromatic rasam effortlessly. A perfect choice for daily meals and soothing home-style comfort.",
+            "paragraphDesc": "<b>Authentic South Indian Flavors:</b> \n \n Experience the true taste of traditional South Indian rasam with our specially crafted Rasam Masala Powder. Made with freshly ground spices, it helps you create that spicy, tangy, and aromatic rasam loved in every South Indian home.\n\n<b>Preservative-Free Goodness:</b>\n\nOur rasam masala contains no artificial preservatives, colors, or fillers. Each spoonful is made only from pure, natural spices, ensuring a clean, fresh, and wholesome flavor in every sip.\n\n<b>Homemade Taste You Can Trust:</b>\n\nCarefully blended to resemble classic homemade rasam mixes, our Rasam Masala Powder brings out the warm, bold, and authentic taste of traditional South Indian cooking. It delivers the perfect balance of heat, tanginess, and aroma—just like rasam prepared in home kitchens.\n\n<b>Perfect for Everyday Meals:</b>\n\nWhether you want a simple, comforting bowl of rasam or a flavorful addition to your lunch, our rasam masala helps you make delicious, aromatic rasam effortlessly. A perfect choice for daily meals and soothing home-style comfort.",
             "ingredientsList": [
                 "Pepper",
                 "Cumin",
@@ -159,6 +162,7 @@
             "title": "Kulambu Powder \n ( குழம்பு பொடி )",
             "url": "kulambu-masala",
             "src": "images/kulambu_masala04.png",
+            "soldInfo": "15 sold in last 24 hours 💥",
             "slides": [
                 "/images/kulambu_masala01.png",
                 "/images/kulambu_masala02.png",

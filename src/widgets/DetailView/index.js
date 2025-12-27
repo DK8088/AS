@@ -25,7 +25,6 @@ const DetailView = ({ product = null }) => {
                                 slides={product.slides}
                                 swiperProps={{
                                     loop: true,
-                                    spaceBetween: 10,
                                     thumbs: {
                                         swiper: thumbsSwiper && !thumbsSwiper.destroyed
                                             ? thumbsSwiper
@@ -47,6 +46,9 @@ const DetailView = ({ product = null }) => {
                                     freeMode: false,
                                     breakpoints: {
                                         0: {
+                                            slidesPerView: 3,
+                                        },
+                                        540: {
                                             slidesPerView: 5,
                                         },
                                         750: {
@@ -85,6 +87,8 @@ const DetailView = ({ product = null }) => {
                             <Spacer space="30" />
                             <Spacer space="20" />
                             <Button link={`https://wa.me/7200579714?text=${product.title} wieght:${product.price[productId].weight}  price:${product.price[productId].new} ${product.desc}`} label='Order Now' color='' />
+                            <Spacer space="30" />
+                            <Text color='red' value={product.soldInfo}/>
                         </GridColumn>
                     </GridRow>
                 </Section>
@@ -106,6 +110,10 @@ const DetailView = ({ product = null }) => {
                                 ))
                             }
                         </ol>
+                        <Spacer space="30" />
+                        <Title className='animateTitle' value='Recipe:'/>
+                        <Spacer space="20" />
+                        <Text color='brown' value={product.recipe} />
                     </div>
                 </Section>
             </>

@@ -1,7 +1,7 @@
 :root {
     --white: #fff;
     --black: #000;
-    --lightWhite : #fcedd1;
+    --lightWhite: #fcedd1;
     --merun: #781d18;
     --brown: #482603;
     --gray: #DCC5B2;
@@ -32,7 +32,6 @@ body::selection {
 }
 
 :global html.mobileMenuOpen body::after {
-    content: '';
     position: fixed;
     top: 0;
     left: 0;
@@ -63,7 +62,7 @@ img {
 
 /* Colors Start */
 
-:global  .white {
+:global .white {
     color: var(--white);
 }
 
@@ -71,7 +70,7 @@ img {
     background-color: var(--white);
 }
 
-:global  .lightWhite {
+:global .lightWhite {
     color: var(--lightWhite);
 }
 
@@ -79,15 +78,15 @@ img {
     background-color: var(--lightWhite);
 }
 
-:global  .merun {
+:global .merun {
     color: var(--merun);
 }
 
-:global  .merunBg {
+:global .merunBg {
     background-color: var(--merun);
 }
 
-:global  .brown {
+:global .brown {
     color: var(--brown);
 }
 
@@ -111,5 +110,18 @@ img {
     background-color: var(--lightGray);
 }
 
+:global .red {
+    color: var(--red);
+}
+
+:global .redGrayBg {
+    background-color: var(--red);
+}
+
 /* Colors End */
 
+@media (max-width: 750px) {
+    :global html.mobileMenuOpen body::after {
+        content: '';
+    }
+}
