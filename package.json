@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://github.com/DK8088/AS",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -19,8 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server --watch public/data/db.json --port 5001",
     "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
