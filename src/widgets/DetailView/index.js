@@ -76,7 +76,7 @@ const DetailView = ({ product = null }) => {
                             </div>
                             <Spacer space="30" />
                             <Title value='Quantity:' />
-                            <Spacer space="20" />
+                            <Spacer space="30" />
                             <div className='productButtonWrap'>
                                 {
                                     product.price.map((item) => {
@@ -85,8 +85,10 @@ const DetailView = ({ product = null }) => {
                                 }
                             </div>
                             <Spacer space="30" />
+                            <Spacer space="10" />
                             <Button link={`https://wa.me/7200579714?text=${product.title} wieght:${product.price[productId].weight}  price:${product.price[productId].new} ${product.desc}`} label='Order Now' color='' />
                             <Spacer space="30" />
+                            <Spacer space="10" />
                             <Text color='red' value={product.soldInfo}/>
                         </GridColumn>
                     </GridRow>

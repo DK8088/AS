@@ -75,14 +75,14 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 
     .logo {
         width: 50px;
     }
 
     .headerLogo {
-        width: 80px;
+        width: 55px;
     }
 
     .FooterLogo {

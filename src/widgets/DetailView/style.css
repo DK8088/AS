@@ -57,6 +57,7 @@
 .productPriceWrap {
     display: flex;
     gap: 20px;
+    line-height: 1;
 }
 
 .oldPrice {

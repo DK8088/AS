@@ -52,8 +52,8 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
     .mainContent {
-        padding-top: 111px;
+        padding-top: 97px;
     }
 }

@@ -43,7 +43,26 @@
 }
 
 @media (max-width: 750px) {
-    .BurgerMenu {
-        display: flex;
-    }
+  .BurgerMenu {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .BurgerMenu {
+    width: 30px;
+    height: 22px;
+  }
+
+  .line {
+    height: 2.5px;
+  }
+
+  .active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .active .line:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
 }
