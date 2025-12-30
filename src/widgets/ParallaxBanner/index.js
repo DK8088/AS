@@ -6,13 +6,16 @@ import Title from '../../components/Title';
 import Text from '../../components/Text';
 import Spacer from '../../components/Spacer';
 
-const ParallaxBanner = ({ data = [] }) => {
+const ParallaxBanner = ({ data = [], parallelBg = false }) => {
 
 	if (data) {
 		return (
-			<Section className='parallaxBanner' bg='none'>
+			<Section bgImage={parallelBg ? data.src : ''} className='parallaxBanner' bg='none'>
 				<div className={style.parallaxBannerWrapper}>
-					<Image className='parallaxImage' src={data.src && data.src} alt={(data.alt && data.alt) || 'parallax Banner'} />
+					{
+						!parallelBg &&
+						<Image className='parallaxImage' src={data.src && data.src} alt={(data.alt && data.alt) || 'parallax Banner'} />
+					}
 					{
 						data.title && data.title.map((item, index) => (
 							<Title key={index + 1} value={item} color='lightWhite' size='fs50' ></Title>

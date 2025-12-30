@@ -80,7 +80,7 @@ const DetailView = ({ product = null }) => {
                             <div className='productButtonWrap'>
                                 {
                                     product.price.map((item) => {
-                                        return <button key={item.id} id={item.id} className={`productButton ${item.id == productId ? 'active' : ''}`} onClick={(e) => { setProductId(e.target.id) }} >{item.weight}</button>
+                                        return <button key={item.id} id={item.id} className={`productButton ${Number(item.id) === Number(productId) ? 'active' : ''}`} onClick={(e) => { setProductId(e.target.id) }} >{item.weight}</button>
                                     })
                                 }
                             </div>

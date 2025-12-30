@@ -20,10 +20,10 @@ const Home = () => {
             <>
                 <HeroBanner slides={homePageData.banner.imageSlides || []}/>
                 <IconColumn cards={homePageData.iconColumn.cards || []}/>
-                <ParallaxBanner data={homePageData.parallaxBanner1 || []}/>
+                <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []}/>
                 <TextAndImage data={homePageData.textAndImage1 || []}/>
                 <TextAndImage data={homePageData.textAndImage2 || []}/>
-                <ParallaxBanner data={homePageData.parallaxBanner1 || []}/>
+                <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []}/>
                 <TextAndImage data={homePageData.textAndImage3 || []}/>
                 <TextAndImage data={homePageData.textAndImage4 || []}/>
                 <SliderGallery slides={homePageData.sliderGallery.slides || []}/>

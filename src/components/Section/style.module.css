@@ -39,6 +39,14 @@
     z-index: -1;
 }
 
+.bgImage {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
 @media (max-width: 1400px) {
     .section {
         padding: 45px 0;
