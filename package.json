@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://github.com/DK8088/AS",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -45,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "json-server": "^1.0.0-beta.3"
+    "gh-pages": "^6.3.0"
   }
 }

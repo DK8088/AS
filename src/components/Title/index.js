@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import style from './style.module.css';
 
 const Title = ({animateText = true, children, value = "", className = "", tag = "h2", size = "fs35", fw = "fw600", color = "merun", fontFamily = "nuninto"}) => {

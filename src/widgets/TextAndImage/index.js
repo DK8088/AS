@@ -8,11 +8,11 @@ import GridRow from '../../components/GridRow';
 import GridColumn from '../../components/GridColumn';
 import Button from '../../components/Button';
 
-const TextAndImage = ({ data }) => {
+const TextAndImage = ({ data=[] }) => {
 	if (data) {
 		return (
 			<Section>
-				<GridRow >
+				<GridRow direction={data.imageDirection}>
 					<GridColumn className='textAndImageImgCol' col='col50'>
 						<Image className='textAndImageImg' link={data.url} src={data.src} alt={data.alt} />
 					</GridColumn>

@@ -56,7 +56,7 @@
             }
         ]
     },
-    "parallaxBanner": {
+    "parallaxBanner1": {
         "src": "/images/parallax2.jpg",
         "alt": "page Banner Image",
         "title": [
@@ -66,12 +66,36 @@
         "desc": "For All The Spicy Masala's"
     },
     "textAndImage1": {
-        "imageDirection": "leftToRight",
+        "imageDirection": "",
         "src": "/images/sambar_masala05.png",
         "alt": "Masala",
         "title": "Sambar Masala Powder \n ( சாம்பார் பொடி )",
         "desc": "Enjoy the traditional taste of South Indian sambar...",
         "url": "/products/sambar/"
+    },
+    "textAndImage2": {
+        "imageDirection": "directionRightToLeft",
+        "alt": "Masala",
+        "title": "Chicken 65 Masala \n (சிக்கன் 65 மசாலா)",
+        "src": "/images/chicken_masala05.png",
+        "desc": "Enjoy the traditional taste of South Indian ...",
+        "url": "/products/chicken-65"
+    },
+    "textAndImage3": {
+        "imageDirection": "directionRightToLeft",
+        "alt": "Masala",
+        "title": "Rasam Powder \n ( ரசம் பொடி )",
+        "url": "/products/rasam",
+        "src": "/images/rasam_masala05.png",
+        "desc": "Enjoy the traditional taste of South Indian ..."
+    },
+    "textAndImage4": {
+        "imageDirection": "",
+        "alt": "Masala",
+        "title": "Kulambu Powder \n ( குழம்பு பொடி )",
+        "url": "/products/kulambu-masala",
+        "src": "/images/kulambu_masala04.png",
+        "desc": "Enjoy the traditional taste of South Indian ..."
     },
     "sliderGallery": {
         "slides": [

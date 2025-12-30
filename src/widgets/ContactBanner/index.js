@@ -45,7 +45,7 @@ const ContactBanner = ({ products = [], data = [] }) => {
                 <Title className='animateTitle' value='Find Us on Map' />
                 <Spacer space='30' />
                 <div className='borderRadius10'>
-                    <iframe width="100%" height="450" frameBorder="0" src="https://www.google.com/maps?q=Babu%20Nagar%20Anuppanadi%20Madurai&amp;output=embed" allowFullScreen=""></iframe>
+                    <iframe title='contact' width="100%" height="450" frameBorder="0" src="https://www.google.com/maps?q=Babu%20Nagar%20Anuppanadi%20Madurai&amp;output=embed" allowFullScreen=""></iframe>
                 </div>
         </Section>
         </>

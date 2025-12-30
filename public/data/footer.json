@@ -20,7 +20,7 @@
       "title": "Quick Links",
       "items": [
         { "id": 1, "label": "Products", "url": "/products" },
-        { "id": 2, "label": "Shipping Details", "url": "/shipping" },
+        { "id": 2, "label": "Shipping Details", "url": "/shipping-details" },
         { "id": 3, "label": "Contact", "url": "/contact-us" }
       ]
     },

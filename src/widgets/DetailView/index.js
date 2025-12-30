@@ -85,7 +85,6 @@ const DetailView = ({ product = null }) => {
                                 }
                             </div>
                             <Spacer space="30" />
-                            <Spacer space="20" />
                             <Button link={`https://wa.me/7200579714?text=${product.title} wieght:${product.price[productId].weight}  price:${product.price[productId].new} ${product.desc}`} label='Order Now' color='' />
                             <Spacer space="30" />
                             <Text color='red' value={product.soldInfo}/>
