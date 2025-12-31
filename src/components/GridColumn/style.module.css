@@ -42,6 +42,14 @@
 	padding: 20px;
 	background-color: var(--merun);
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	will-change: transform;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+	transform-style: preserve-3d;
+}
+
+.iconColumn:hover {
+	transform: translateY(-8px) scale(1.06);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .gridColumnWrapper.col50 {

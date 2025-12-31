@@ -2,11 +2,18 @@ import React from 'react';
 import Section from '../../components/Section';
 import Slider from '../../components/Slider';
 import Image from '../../components/Image';
+import Title from '../../components/Title';
+import Spacer from '../../components/Spacer';
 
 const SliderGallery = ({ slides }) => {
 	if (slides) {
 		return (
 			<Section bg='grayBg'>
+				<div className='alignCenter'>
+					<Title className='animateTitle' value='Authentic Flavours, Just Like Home' />
+					<Spacer space='30' />
+					<Spacer space='30' />
+				</div>
 				<div className='sliderGalleryWrapper'>
 					<Slider slides={slides}
 						swiperProps={{

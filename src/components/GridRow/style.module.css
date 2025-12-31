@@ -18,6 +18,10 @@
     flex-direction: row-reverse;
 }
 
+.overFlowHide {
+    overflow: hidden;
+}
+
 @media (max-width: 1400px) {
     .gridRow {
         margin: 0 -16px;
