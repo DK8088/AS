@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import Title from '../components/Title';
 import Text from '../components/Text';
 import Spacer from '../components/Spacer';
+import Loading from '../components/Loading';
 
 const Shipping = () => {
 
@@ -14,6 +15,12 @@ const Shipping = () => {
     useEffect(() => {
         setShippingPageData(data);
     }, [data, loading]);
+
+    if (loading) {
+        return (
+            <Loading />
+        );
+    }
 
     if (shippingPageData) {
         return (

@@ -23,19 +23,25 @@ const IconColumn = ({ cards = [] }) => {
 
 			gsap.fromTo(
 				'.animateColumn',
-				{ x: 100, opacity: 0,visibility:'hidden' },
+				{
+					x: 100,
+					scale:0.9,
+					opacity: 0,
+					visibility: 'hidden'
+				},
 				{
 					x: 0,
 					opacity: 1,
+					scale:1,
 					visibility: 'visible',
 					duration: 0.7,
 					ease: 'power3.out',
-					stagger: 0.20,
+					stagger: 0.30,
 					scrollTrigger: {
 						trigger: gridRef.current,
 						start: 'top bottom',
 						end: 'bottom top',
-						toggleActions: 'play reset play reset',
+						toggleActions: 'play reverse play reverse',
 					}
 				}
 			);

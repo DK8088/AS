@@ -5,15 +5,22 @@ import ParallaxBanner from '../widgets/ParallaxBanner';
 import CardList from '../widgets/CardList';
 import SliderGallery from '../widgets/SliderGallery';
 import DetailView from '../widgets/DetailView';
+import Loading from '../components/Loading';
 
 const Products = () => {
     const [productsPageData, setProductsPageData] = useState(null);
-    const { data } = UseJsonData('products');
+    const { data,loading } = UseJsonData('products');
     const { id } = useParams();
 
     useEffect(() => {
         setProductsPageData(data);
     }, [data]);
+
+    if (loading) {
+        return (
+            <Loading />
+        );
+    }
 
     if (!productsPageData) {
         return null;

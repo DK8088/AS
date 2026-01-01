@@ -5,6 +5,7 @@ import IconColumn from '../widgets/IconColumn';
 import ParallaxBanner from '../widgets/ParallaxBanner';
 import TextAndImage from '../widgets/TextAndImage';
 import SliderGallery from '../widgets/SliderGallery';
+import Loading from '../components/Loading';
 
 const Home = () => {
 
@@ -14,6 +15,12 @@ const Home = () => {
     useEffect(() => {
         setHomePageData(data);
     }, [data, loading]);
+
+    if (loading) {
+        return (
+            <Loading/>
+        );
+    }
 
     if (homePageData) {
         return (
