@@ -39,8 +39,7 @@ const IconColumn = ({ cards = [] }) => {
 					stagger: 0.30,
 					scrollTrigger: {
 						trigger: gridRef.current,
-						start: 'top bottom',
-						end: 'bottom top',
+						start: 'top 70%',
 						toggleActions: 'play reverse play reverse',
 					}
 				}

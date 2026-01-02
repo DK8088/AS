@@ -8,35 +8,39 @@ import SliderGallery from '../widgets/SliderGallery';
 import Loading from '../components/Loading';
 
 const Home = () => {
-
     const [homePageData, setHomePageData] = useState(null);
+    const [delayDone, setDelayDone] = useState(false);
+
     const { data, loading } = UseJsonData('home');
 
     useEffect(() => {
-        setHomePageData(data);
+        if (data && !loading) {
+            setHomePageData(data);
+            const timer = setTimeout(() => {
+                setDelayDone(true);
+            }, 1300);
+
+            return () => clearTimeout(timer);
+        }
     }, [data, loading]);
 
-    if (loading) {
-        return (
-            <Loading/>
-        );
+    if (loading || !delayDone) {
+        return <Loading />;
     }
 
-    if (homePageData) {
-        return (
-            <>
-                <HeroBanner slides={homePageData.banner.imageSlides || []}/>
-                <IconColumn cards={homePageData.iconColumn.cards || []}/>
-                <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []}/>
-                <TextAndImage data={homePageData.textAndImage1 || []}/>
-                <TextAndImage data={homePageData.textAndImage2 || []}/>
-                <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []}/>
-                <TextAndImage data={homePageData.textAndImage3 || []}/>
-                <TextAndImage data={homePageData.textAndImage4 || []}/>
-                <SliderGallery slides={homePageData.sliderGallery.slides || []}/>
-            </>
-        );
-    }
-}
+    return (
+        <>
+            <HeroBanner slides={homePageData.banner.imageSlides || []} />
+            <IconColumn cards={homePageData.iconColumn.cards || []} />
+            <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []} />
+            <TextAndImage data={homePageData.textAndImage1 || []} />
+            <TextAndImage data={homePageData.textAndImage2 || []} />
+            <ParallaxBanner parallelBg={true} data={homePageData.parallaxBanner1 || []} />
+            <TextAndImage data={homePageData.textAndImage3 || []} />
+            <TextAndImage data={homePageData.textAndImage4 || []} />
+            <SliderGallery slides={homePageData.sliderGallery.slides || []} />
+        </>
+    );
+};
 
 export default Home;

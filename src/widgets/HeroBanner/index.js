@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './style.module.css';
+import './style.css';
 import Slider from '../../components/Slider';
 import Section from '../../components/Section';
 import Image from '../../components/Image';
@@ -8,7 +8,7 @@ const HeroBanner = ({ slides }) => {
 	if (slides) {
 		return (
 			<Section>
-				<div className={style.banner}>
+				<div className='banner'>
 					<Slider slides={slides}>
 						{
 							(slides) => (<Image className='bannerSlideImage' src={slides.src} alt={slides.alt} />)

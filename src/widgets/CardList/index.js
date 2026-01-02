@@ -22,7 +22,7 @@ const CardList = ({ products = [], data = [] }) => {
                                 <GridColumn col='col100' className='productCardTextCol'>
                                     <Title value={item.title} size='fs28' />
                                     <Spacer space='30' />
-                                    <Text value={item.desc} />
+                                    <Text value={item.desc} color='brown' />
                                     <Spacer space='30' />
                                     <Button link={item.url} color='lightWhite' />
                                 </GridColumn>

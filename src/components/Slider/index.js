@@ -15,6 +15,7 @@ const Slider = ({className='', slides = [], children, swiperProps = {}}) => {
 			autoplay={{
 				delay: 3000,
 				disableOnInteraction: false,
+				pauseOnMouseEnter: true
 			}}
 			{...swiperProps}
 		>

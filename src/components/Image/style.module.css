@@ -11,8 +11,11 @@ img {
 }
 
 .bannerSlideImage {
-	position: relative;
-	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .columnIcon {
@@ -68,10 +71,6 @@ img {
 	margin: auto;
 }
 
-.productCarouselTopImage {
-	width: 40%;
-	margin: auto;
-}
 
 .productCarouselBotImage {
 	width: 80px;

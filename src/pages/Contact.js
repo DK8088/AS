@@ -7,11 +7,23 @@ import Loading from '../components/Loading';
 const Contact = () => {
 
     const [contactPageData, setContactPageData] = useState(null);
+    const [delayDone, setDelayDone] = useState(false);
     const { data, loading } = UseJsonData('contact');
 
     useEffect(() => {
-        setContactPageData(data);
+        if (data && !loading) {
+            setContactPageData(data);
+            const timer = setTimeout(() => {
+                setDelayDone(true);
+            }, 1300);
+
+            return () => clearTimeout(timer);
+        }
     }, [data, loading]);
+
+    if (loading || !delayDone) {
+        return <Loading />;
+    }
     
     if (loading) {
         return (

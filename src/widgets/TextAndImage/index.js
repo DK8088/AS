@@ -23,8 +23,7 @@ const TextAndImage = ({ data = [] }) => {
 				scrollTrigger: {
 					trigger: gridRef.current,
 					start: 'top 70%',
-					end: 'bottom top',
-					toggleActions: 'play reverse play reverse',
+					toggleActions: 'play reverse play play',
 				},
 			});
 
@@ -36,7 +35,7 @@ const TextAndImage = ({ data = [] }) => {
 					opacity: 1,
 					duration: 0.7,
 					ease: 'power3.out',
-					stagger: 0.15,
+					stagger: 0.25,
 				}
 			).fromTo(
 				'.rightToLeft',
@@ -46,7 +45,7 @@ const TextAndImage = ({ data = [] }) => {
 					opacity: 1,
 					duration: 0.7,
 					ease: 'power3.out',
-					stagger: 0.15,
+					stagger: 0.25,
 				},
 				'-=0.5'
 			);
@@ -64,7 +63,7 @@ const TextAndImage = ({ data = [] }) => {
 						<GridColumn animateClass='rightToLeft' col='col50'>
 							<Title value={data.title} size='fs50' />
 							<Spacer space='30' />
-							<Text value={data.desc} />
+							<Text value={data.desc} color='brown' />
 							<Spacer space='30' />
 							<Button link={data.url} color='lightWhite' />
 						</GridColumn>

@@ -32,7 +32,29 @@ const DetailView = ({ product = null }) => {
                                     },
                                 }}
                             >
-                                {(slide) => (<Image className="productCarouselTopImage" src={slide} />)}
+                                {(slide) => (
+                                    <div className='productCarouselTopImage'>
+                                        <img
+                                            className="zoom-image"
+                                            src={slide}
+                                            onMouseMove={(e) => {
+                                                const img = e.currentTarget;
+                                                const rect = img.getBoundingClientRect();
+
+                                                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                                                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                                                img.style.transformOrigin = `${x}% ${y}%`;
+                                                img.style.transform = 'scale(2)';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                const img = e.currentTarget;
+                                                img.style.transformOrigin = 'center center';
+                                                img.style.transform = 'scale(1)';
+                                            }}
+                                        />
+                                    </div>
+                                )}
                             </Slider>
                             <Spacer space="30" />
                             <Slider
@@ -89,7 +111,7 @@ const DetailView = ({ product = null }) => {
                             <Button link={`https://wa.me/7200579714?text=${product.title} wieght:${product.price[productId].weight}  price:${product.price[productId].new} ${product.desc}`} label='Order Now' color='' />
                             <Spacer space="30" />
                             <Spacer space="10" />
-                            <Text color='red' value={product.soldInfo}/>
+                            <Text color='red' value={product.soldInfo} />
                         </GridColumn>
                     </GridRow>
                 </Section>
@@ -112,7 +134,7 @@ const DetailView = ({ product = null }) => {
                             }
                         </ol>
                         <Spacer space="30" />
-                        <Title className='animateTitle' value='Recipe:'/>
+                        <Title className='animateTitle' value='Recipe:' />
                         <Spacer space="20" />
                         <Text color='brown' value={product.recipe} />
                     </div>

@@ -9,17 +9,23 @@ import Loading from '../components/Loading';
 
 const Products = () => {
     const [productsPageData, setProductsPageData] = useState(null);
-    const { data,loading } = UseJsonData('products');
+    const [delayDone, setDelayDone] = useState(false);
+    const { data, loading } = UseJsonData('products');
     const { id } = useParams();
 
     useEffect(() => {
-        setProductsPageData(data);
-    }, [data]);
+        if (data && !loading) {
+            setProductsPageData(data);
+            const timer = setTimeout(() => {
+                setDelayDone(true);
+            }, 1300);
 
-    if (loading) {
-        return (
-            <Loading />
-        );
+            return () => clearTimeout(timer);
+        }
+    }, [data, loading]);
+
+    if (loading || !delayDone) {
+        return <Loading />;
     }
 
     if (!productsPageData) {
