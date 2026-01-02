@@ -30,19 +30,19 @@
 
 @media (max-width: 1400px) {
     .mainContent {
-        padding-top: 136px;
+        padding-top: 134px;
     }
 }
 
 @media (max-width: 1200px) {
     .mainContent {
-        padding-top: 126px;
+        padding-top: 130px;
     }
 }
 
 @media (max-width: 1024px) {
     .mainContent {
-        padding-top: 118px;
+        padding-top: 119px;
     }
 }
 
@@ -54,6 +54,6 @@
 
 @media (max-width: 600px) {
     .mainContent {
-        padding-top: 97px;
+        padding-top: 88px;
     }
 }

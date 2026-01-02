@@ -1,5 +1,5 @@
 .text {
-  white-space: pre-line;
+    white-space: pre-line;
 }
 
 .text b {
@@ -58,6 +58,10 @@
     font-size: 18px;
 }
 
+.fs16 {
+    font-size: 16px;
+}
+
 .fs14 {
     font-size: 14px;
 }
@@ -90,4 +94,8 @@
     }
 }
 
-@media (max-width: 540px) {}
+@media (max-width: 600px) {
+    .fs16 {
+        font-size: 14px;
+    }
+}

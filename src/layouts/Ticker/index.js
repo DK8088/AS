@@ -12,7 +12,7 @@ const Ticker = ({ text = [] }) => {
             <div className={style.ticker}>
                 <Marquee speed={50} direction='right' autoFill pauseOnHover gradient={false}>
                     {text.map((content, index) => (
-                        <Text key={index} className={style.marqueeText} size="size20" fw="fw600">
+                        <Text key={index} className={style.marqueeText} size="fs16" fw="fw600">
                             <span className={style.item}>{content}</span>
                         </Text>
                     ))}
